@@ -1,0 +1,10 @@
+﻿
+.dfPager { font-size: 14px; width: 100%; line-height: 25px; margin-left: auto; margin-right: auto; margin-top: 5px; text-align: center; }
+.dfPager a { text-decoration:none; /* border:solid 1px #AAE; */ color: #15B; }
+.dfPager a: hover { border: solid 1px #0000FF; }
+.dfPager a, .dfPager span { padding: 2px; margin: 2px; }
+.dfPager input { width: 30px; height: 18px; }
+/* .dfPager .current { color: #fff; background: #26B; border: solid 1px #AAE; } */
+/* .dfPager .current .prev, .dfPager .current .next{ color: #999;  border-color: #999; background: #fff; } */
+.dfPager .current { font-weight: bold; }
+.dfPager .current .prev, .dfPager .current .next{ font-weight: bold; }

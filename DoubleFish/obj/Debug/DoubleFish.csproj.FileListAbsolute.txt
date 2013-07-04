@@ -1,0 +1,9 @@
+D:\My Projects\DoubleFish\DoubleFish\DoubleFish\obj\Debug\ResolveAssemblyReference.cache
+D:\My Projects\DoubleFish\DoubleFish\DoubleFish\bin\Debug\DoubleFish.dll
+D:\My Projects\DoubleFish\DoubleFish\DoubleFish\bin\Debug\DoubleFish.pdb
+D:\My Projects\DoubleFish\DoubleFish\DoubleFish\obj\Debug\DoubleFish.dll
+D:\My Projects\DoubleFish\DoubleFish\DoubleFish\obj\Debug\DoubleFish.pdb
+D:\My Project\DoubleFish\DoubleFish\DoubleFish\bin\Debug\DoubleFish.dll
+D:\My Project\DoubleFish\DoubleFish\DoubleFish\bin\Debug\DoubleFish.pdb
+D:\My Project\DoubleFish\DoubleFish\DoubleFish\obj\Debug\DoubleFish.dll
+D:\My Project\DoubleFish\DoubleFish\DoubleFish\obj\Debug\DoubleFish.pdb

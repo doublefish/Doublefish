@@ -1,0 +1,10 @@
+D:\My Projects\DoubleFish\DoubleFish\DoubleFish.Html\bin\Debug\DoubleFish.Html.dll
+D:\My Projects\DoubleFish\DoubleFish\DoubleFish.Html\bin\Debug\DoubleFish.Html.pdb
+D:\My Projects\DoubleFish\DoubleFish\DoubleFish.Html\obj\Debug\ResolveAssemblyReference.cache
+D:\My Projects\DoubleFish\DoubleFish\DoubleFish.Html\obj\Debug\DoubleFish.Html.dll
+D:\My Projects\DoubleFish\DoubleFish\DoubleFish.Html\obj\Debug\DoubleFish.Html.pdb
+D:\My Project\DoubleFish\DoubleFish\DoubleFish.Html\bin\Debug\DoubleFish.Html.dll
+D:\My Project\DoubleFish\DoubleFish\DoubleFish.Html\bin\Debug\DoubleFish.Html.pdb
+D:\My Project\DoubleFish\DoubleFish\DoubleFish.Html\obj\Debug\DoubleFish.Html.csprojResolveAssemblyReference.cache
+D:\My Project\DoubleFish\DoubleFish\DoubleFish.Html\obj\Debug\DoubleFish.Html.dll
+D:\My Project\DoubleFish\DoubleFish\DoubleFish.Html\obj\Debug\DoubleFish.Html.pdb

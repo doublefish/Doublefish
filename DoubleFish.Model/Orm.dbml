@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DoubleFish" Class="OrmDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=DoubleFish;Persist Security Info=True;User ID=sa" SettingsObjectName="DoubleFish.Model.Properties.Settings" SettingsPropertyName="DoubleFishConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Article" Member="Article">
+    <Type Name="Article">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="VarChar(5120)" CanBeNull="true" />
+      <Column Name="[User]" Member="User" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="UserInfo_Article" Member="UserInfo" ThisKey="User" OtherKey="Id" Type="UserInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserRole" Member="UserRole">
+    <Type Name="UserRole">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Role" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="[User]" Member="User" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="UserInfo_UserRole" Member="UserInfo" ThisKey="User" OtherKey="Id" Type="UserInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MenuInfo" Member="MenuInfo">
+    <Type Name="MenuInfo">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Parent" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Flag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="MenuInfo_MenuInfo" Member="MenuInfo2" ThisKey="Id" OtherKey="Parent" Type="MenuInfo" />
+      <Association Name="MenuInfo_Permission" Member="Permission" ThisKey="Id" OtherKey="Menu" Type="Permission" />
+      <Association Name="MenuInfo_MenuInfo" Member="MenuInfo1" ThisKey="Parent" OtherKey="Id" Type="MenuInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Permission" Member="Permission">
+    <Type Name="Permission">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Role" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="[User]" Member="User" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Menu" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="MenuInfo_Permission" Member="MenuInfo" ThisKey="Menu" OtherKey="Id" Type="MenuInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegionInfo" Member="RegionInfo">
+    <Type Name="RegionInfo">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Parent" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Flag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="RegionInfo_UserInfo" Member="UserInfo" ThisKey="Id" OtherKey="Region" Type="UserInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RoleInfo" Member="RoleInfo">
+    <Type Name="RoleInfo">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Flag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserInfo" Member="UserInfo">
+    <Type Name="UserInfo">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Mail" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Region" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="RegistTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="UserInfo_Article" Member="Article" ThisKey="Id" OtherKey="User" Type="Article" />
+      <Association Name="UserInfo_UserRole" Member="UserRole" ThisKey="Id" OtherKey="User" Type="UserRole" />
+      <Association Name="UserInfo_UserPassword" Member="UserPassword" ThisKey="Id" OtherKey="User" Type="UserPassword" />
+      <Association Name="RegionInfo_UserInfo" Member="RegionInfo" ThisKey="Region" OtherKey="Id" Type="RegionInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserPassword" Member="UserPassword">
+    <Type Name="UserPassword">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[User]" Member="User" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Flag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="UserInfo_UserPassword" Member="UserInfo" ThisKey="User" OtherKey="Id" Type="UserInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.MenuInfo_RecursiveByParent" Method="MenuInfo_RecursiveByParent">
+    <Parameter Name="Parent" Parameter="parent" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="MenuInfo_RecursiveByParentResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Parent" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
