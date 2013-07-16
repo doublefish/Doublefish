@@ -98,25 +98,25 @@ namespace DoubleFish.Web.View.ICS
 			return text;
 		}
 
-		public string GetHtmlSource (string url, string charset)
-		{
-			if (charset == "" || charset == null) charset = "utf-8";
-			string text = "";
-			try
-			{
-				HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-				HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-				Stream stream = response.GetResponseStream();
-				StreamReader reader = new StreamReader(stream, Encoding.GetEncoding(charset));
-				text = reader.ReadToEnd();
-				stream.Close();
-				response.Close();
-			}
-			catch (Exception ex)
-			{
-			}
-			return text;
-		}
+		//public string GetHtmlSource (string url, string charset)
+		//{
+		//	if (charset == "" || charset == null) charset = "utf-8";
+		//	string text = "";
+		//	try
+		//	{
+		//		HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+		//		HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+		//		Stream stream = response.GetResponseStream();
+		//		StreamReader reader = new StreamReader(stream, Encoding.GetEncoding(charset));
+		//		text = reader.ReadToEnd();
+		//		stream.Close();
+		//		response.Close();
+		//	}
+		//	catch (Exception ex)
+		//	{
+		//	}
+		//	return text;
+		//}
 
 		public string Get_Http (string a_strUrl, int timeout)
 		{
@@ -144,29 +144,29 @@ namespace DoubleFish.Web.View.ICS
 		
 		//获取页面内容后，分析页面中连接地址取到要抓取的url：
 		//处理页面标题和链接
-		public string SniffwebCode (string code, string wordsBegin, string wordsEnd)
-		{
-			string NewsTitle = "";
-			Regex regex = new Regex("" + wordsBegin + @"(?<title>[\s\S]+?)" + wordsEnd + "", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-			for (Match match = regex.Match(code); match.Success; match = match.NextMatch())
-			{
-				NewsTitle = match.Groups["title"].ToString();
-			}
-			return NewsTitle;
-		}
+		//public string SniffwebCode (string code, string wordsBegin, string wordsEnd)
+		//{
+		//	string NewsTitle = "";
+		//	Regex regex = new Regex("" + wordsBegin + @"(?<title>[\s\S]+?)" + wordsEnd + "", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+		//	for (Match match = regex.Match(code); match.Success; match = match.NextMatch())
+		//	{
+		//		NewsTitle = match.Groups["title"].ToString();
+		//	}
+		//	return NewsTitle;
+		//}
 
 
-		public ArrayList SniffwebCodeReturnList (string code, string wordsBegin, string wordsEnd)
-		{
-			ArrayList urlList = new ArrayList();
-			//string NewsTitle = "";
-			Regex regex = new Regex("" + wordsBegin + @"(?<title>[\s\S]+?)" + wordsEnd + "", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-			for (Match match = regex.Match(code); match.Success; match = match.NextMatch())
-			{
-				urlList.Add(match.Groups["title"].ToString());
-			}
-			return urlList;
-		}
+		//public ArrayList SniffwebCodeReturnList (string code, string wordsBegin, string wordsEnd)
+		//{
+		//	ArrayList urlList = new ArrayList();
+		//	//string NewsTitle = "";
+		//	Regex regex = new Regex("" + wordsBegin + @"(?<title>[\s\S]+?)" + wordsEnd + "", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+		//	for (Match match = regex.Match(code); match.Success; match = match.NextMatch())
+		//	{
+		//		urlList.Add(match.Groups["title"].ToString());
+		//	}
+		//	return urlList;
+		//}
 
 
 		public string InformationCollection (HttpContext context, string url)

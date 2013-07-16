@@ -5,6 +5,5 @@ D:\My Projects\DoubleFish\DoubleFish\DoubleFish.Database\obj\Debug\DoubleFish.Da
 D:\My Projects\DoubleFish\DoubleFish\DoubleFish.Database\obj\Debug\DoubleFish.Database.pdb
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Database\bin\Debug\DoubleFish.Database.dll
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Database\bin\Debug\DoubleFish.Database.pdb
-D:\My Project\DoubleFish\DoubleFish\DoubleFish.Database\obj\Debug\DoubleFish.Database.csprojResolveAssemblyReference.cache
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Database\obj\Debug\DoubleFish.Database.dll
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Database\obj\Debug\DoubleFish.Database.pdb

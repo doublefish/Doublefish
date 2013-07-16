@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DoubleFish.File
 {
-	public class Excel
+	public class DFExcel
 	{
 		#region [属性]
 
@@ -106,7 +106,7 @@ namespace DoubleFish.File
 
 		#endregion
 
-		public Excel ()
+		public DFExcel ()
 		{
 			this._Css = new Dictionary<string, string>();
 			this._PageSetup = new PageSetup();
@@ -144,7 +144,8 @@ xmlns='http://www.w3.org/TR/REC-html40'>
 	" + (this.PageSetup.PrintHorizontal ? "mso-page-orientation:landscape;" : string.Empty) + @"}
 tr
 	{mso-height-source:auto;
-	mso-ruby-visibility:none;}
+	mso-ruby-visibility:none;
+	mso-width-source: userset;}
 col
 	{mso-width-source:auto;
 	mso-ruby-visibility:none;}
@@ -162,7 +163,6 @@ td
 	text-decoration:none;
 	font-family:宋体;
 	vertical-align:middle;
-	border:none;
 	white-space:normal;}";
 			foreach (string key in this.Css.Keys)
 			{
@@ -209,18 +209,19 @@ td
 </head>
 
 <body>
-<table border=0 cellpadding=0 cellspacing=0 style='white-space:normal;'>
+
 ";
 			if (this.ColumnsWidth != null)
 			{
+				code += "<table border=0 cellpadding=0 cellspacing=0 style='white-space:normal;'>";
 				for (var i = 0; i < this.ColumnsWidth.Length; i++)
 				{
 					code += "\r\n<col style='width:" + this.ColumnsWidth[i] + "px;mso-width-source:userset;'>";
 				}
+				code += "</table>";
 			}
 			code += this.Body;
 			code += @"
-</table>
 </body>
 </html>
 ";

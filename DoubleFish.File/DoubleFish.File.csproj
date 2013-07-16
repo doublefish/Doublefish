@@ -43,9 +43,9 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Excel.cs" />
+    <Compile Include="DFExcel.cs" />
     <Compile Include="Pdf.cs" />
-    <Compile Include="WinRAR.cs" />
+    <Compile Include="DFRAR.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

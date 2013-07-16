@@ -5,9 +5,9 @@ using Microsoft.Win32;
 
 namespace DoubleFish.File
 {
-	public class WinRAR
+	public class DFRAR
 	{
-		public WinRAR ()
+		public DFRAR ()
 		{
 			//判断是否安装了WinRAR.exe
 			RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\WinRAR.exe");
