@@ -43,7 +43,7 @@ namespace DoubleFish.Web.View.Excel
 				OleConn.Close();
 				return OleDsExcle;
 			}
-			catch (Exception err)
+			catch (Exception)
 			{
 
 				return null;

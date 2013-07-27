@@ -7,3 +7,4 @@ D:\My Project\DoubleFish\DoubleFish\DoubleFish.Http\bin\Debug\DoubleFish.Http.dl
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Http\bin\Debug\DoubleFish.Http.pdb
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Http\obj\Debug\DoubleFish.Http.dll
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Http\obj\Debug\DoubleFish.Http.pdb
+D:\My Project\DoubleFish\DoubleFish\DoubleFish.Http\obj\Debug\DoubleFish.Http.csprojResolveAssemblyReference.cache

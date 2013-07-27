@@ -51,6 +51,7 @@ namespace DoubleFish.Web.View.ICS
 			}
 			catch (Exception ex)
 			{
+				return ex.Message;
 			}
 			return text;
 		}
@@ -94,6 +95,7 @@ namespace DoubleFish.Web.View.ICS
 			}
 			catch (Exception ex)
 			{
+				return ex.Message;
 			}
 			return text;
 		}

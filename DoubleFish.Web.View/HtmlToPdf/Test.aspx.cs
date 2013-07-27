@@ -68,25 +68,25 @@ namespace DoubleFish.Web.View.Test
 				list[i / columnCount].Add(element.innerHTML);
 			}
 
-			return list;
+			//var result = "";
 
-			string result = "";
+			//for (int i = 0; i < elements.length; i++)
+			//{
+			//	// 使用item这个方法可以将集合中的元素取出
+			//	// 第一个参数代表的是顺序，但是在msdn中表示为name
+			//	// 第二个参数msdn中表示为index,但经过测试后,指的并不是顺序,所以目前无法确定它的用途
+			//	// 如果有知道的朋友，也请跟我说一下
+			//	IHTMLElement element = (IHTMLElement)elements.item(i, null);
 
-			for (int i = 0; i < elements.length; i++)
-			{
-				// 使用item这个方法可以将集合中的元素取出
-				// 第一个参数代表的是顺序，但是在msdn中表示为name
-				// 第二个参数msdn中表示为index,但经过测试后,指的并不是顺序,所以目前无法确定它的用途
-				// 如果有知道的朋友，也请跟我说一下
-				IHTMLElement element = (IHTMLElement)elements.item(i, null);
+			//	if (string.IsNullOrEmpty(element.innerHTML))
+			//		continue;
 
-				if (string.IsNullOrEmpty(element.innerHTML))
-					continue;
-
-				result += element.innerHTML;
-			}
+			//	result += element.innerHTML;
+			//}
 
 			//return result;
+
+			return list;
 		}
 
 		/// <summary>

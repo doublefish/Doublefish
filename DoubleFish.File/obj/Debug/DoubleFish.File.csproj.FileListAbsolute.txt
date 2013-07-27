@@ -7,3 +7,4 @@ D:\My Project\DoubleFish\DoubleFish\DoubleFish.File\bin\Debug\DoubleFish.File.dl
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.File\bin\Debug\DoubleFish.File.pdb
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.File\obj\Debug\DoubleFish.File.dll
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.File\obj\Debug\DoubleFish.File.pdb
+D:\My Project\DoubleFish\DoubleFish\DoubleFish.File\obj\Debug\DoubleFish.File.csprojResolveAssemblyReference.cache
