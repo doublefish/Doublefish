@@ -30,12 +30,12 @@ namespace DoubleFish.Database
 
 			T t = new T();
 			// 获得此模型的公共属性
-			PropertyInfo[] propertys = t.GetType().GetProperties();
+			PropertyInfo[] properties = t.GetType().GetProperties();
 
 			for (int i = 0; i < dataTable.Rows.Count; i++)
 			{
 				array[i] = new T();
-				foreach (PropertyInfo pi in propertys)
+				foreach (PropertyInfo pi in properties)
 				{
 					// 检查DataTable是否包含此列 
 					if (!dataTable.Columns.Contains(pi.Name))
@@ -73,12 +73,12 @@ namespace DoubleFish.Database
 
 			T t = new T();
 			// 获得此模型的公共属性 
-			PropertyInfo[] propertys = t.GetType().GetProperties();
+			PropertyInfo[] properties = t.GetType().GetProperties();
 
 			for (int i = 0; i < dataTable.Rows.Count; i++)
 			{
 				list[i] = new T();
-				foreach (PropertyInfo pi in propertys)
+				foreach (PropertyInfo pi in properties)
 				{
 					// 检查DataTable是否包含此列 
 					if (!dataTable.Columns.Contains(pi.Name))
@@ -114,9 +114,9 @@ namespace DoubleFish.Database
 			Type type = typeof(T);
 
 			// 获得此模型的公共属性 
-			PropertyInfo[] propertys = t.GetType().GetProperties();
+			PropertyInfo[] properties = t.GetType().GetProperties();
 
-			foreach (PropertyInfo pi in propertys)
+			foreach (PropertyInfo pi in properties)
 			{
 				// 检查DataTable是否包含此列 
 				if (!dataTable.Columns.Contains(pi.Name))
@@ -151,9 +151,9 @@ namespace DoubleFish.Database
 			Type type = typeof(T);
 
 			// 获得此模型的公共属性 
-			PropertyInfo[] propertys = t.GetType().GetProperties();
+			PropertyInfo[] properties = t.GetType().GetProperties();
 
-			foreach (PropertyInfo pi in propertys)
+			foreach (PropertyInfo pi in properties)
 			{
 				// 检查DataTable是否包含此列 
 				if (!dataRow.Table.Columns.Contains(pi.Name))
