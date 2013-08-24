@@ -32,3 +32,20 @@ D:\My Project\DoubleFish\DoubleFish\DoubleFish.Web\bin\Debug\DoubleFish.Database
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Web\obj\Debug\DoubleFish.Web.csprojResolveAssemblyReference.cache
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Web\obj\Debug\DoubleFish.Web.dll
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Web\obj\Debug\DoubleFish.Web.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\bin\Debug\DoubleFish.Web.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\bin\Debug\DoubleFish.Web.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\bin\Debug\DoubleFish.BLL.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\bin\Debug\DoubleFish.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\bin\Debug\DoubleFish.Http.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\bin\Debug\DoubleFish.Model.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\bin\Debug\DoubleFish.DAL.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\bin\Debug\DoubleFish.Database.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\bin\Debug\DoubleFish.BLL.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\bin\Debug\DoubleFish.Http.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\bin\Debug\DoubleFish.Model.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\bin\Debug\DoubleFish.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\bin\Debug\DoubleFish.DAL.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\bin\Debug\DoubleFish.Database.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\obj\Debug\DoubleFish.Web.csprojResolveAssemblyReference.cache
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\obj\Debug\DoubleFish.Web.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web\obj\Debug\DoubleFish.Web.pdb

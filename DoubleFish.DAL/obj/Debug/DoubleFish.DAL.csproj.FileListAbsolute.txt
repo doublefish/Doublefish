@@ -16,3 +16,12 @@ D:\My Project\DoubleFish\DoubleFish\DoubleFish.DAL\bin\Debug\DoubleFish.Model.pd
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.DAL\obj\Debug\DoubleFish.DAL.csprojResolveAssemblyReference.cache
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.DAL\obj\Debug\DoubleFish.DAL.dll
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.DAL\obj\Debug\DoubleFish.DAL.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.DAL\bin\Debug\DoubleFish.DAL.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.DAL\bin\Debug\DoubleFish.DAL.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.DAL\bin\Debug\DoubleFish.Database.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.DAL\bin\Debug\DoubleFish.Model.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.DAL\bin\Debug\DoubleFish.Database.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.DAL\bin\Debug\DoubleFish.Model.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.DAL\obj\Debug\DoubleFish.DAL.csprojResolveAssemblyReference.cache
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.DAL\obj\Debug\DoubleFish.DAL.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.DAL\obj\Debug\DoubleFish.DAL.pdb

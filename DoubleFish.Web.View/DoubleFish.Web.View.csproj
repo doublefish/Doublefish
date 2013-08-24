@@ -30,6 +30,10 @@
     <SilverlightApplicationList>
     </SilverlightApplicationList>
     <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -88,7 +92,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ICS\ICS.aspx" />
+    <Content Include="HomeLeft.aspx" />
     <Content Include="obj\ephtmltopdf.dll" />
     <Content Include="obj\evohtmltopdf.dll" />
     <Content Include="obj\itextsharp.dll" />
@@ -523,8 +527,9 @@
     <Content Include="Sys\FileMgr.aspx" />
     <Content Include="Sys\MenuMgr.aspx" />
     <Content Include="Sys\Permission.aspx" />
-    <Content Include="Org\UserMgr.aspx" />
     <Content Include="Sys\RoleMgr.aspx" />
+    <Content Include="Sys\SysMgr.aspx" />
+    <Content Include="Sys\UserMgr.aspx" />
     <Content Include="Sys\UserRole.aspx" />
     <Content Include="HtmlToPdf\Test.aspx" />
     <Content Include="HtmlToPdf\Test1.aspx" />
@@ -535,6 +540,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HomeLeft.aspx.cs">
+      <DependentUpon>HomeLeft.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeLeft.aspx.designer.cs">
+      <DependentUpon>HomeLeft.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HtmlToPdf\Pdf.aspx.cs">
       <DependentUpon>Pdf.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -562,13 +573,6 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ICS\ICS.aspx.cs">
-      <DependentUpon>ICS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ICS\ICS.aspx.designer.cs">
-      <DependentUpon>ICS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -641,19 +645,24 @@
     <Compile Include="Sys\Permission.aspx.designer.cs">
       <DependentUpon>Permission.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Org\UserMgr.aspx.cs">
-      <DependentUpon>UserMgr.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Org\UserMgr.aspx.designer.cs">
-      <DependentUpon>UserMgr.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Sys\RoleMgr.aspx.cs">
       <DependentUpon>RoleMgr.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Sys\RoleMgr.aspx.designer.cs">
       <DependentUpon>RoleMgr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\SysMgr.aspx.cs">
+      <DependentUpon>SysMgr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\SysMgr.aspx.designer.cs">
+      <DependentUpon>SysMgr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\UserMgr.aspx.cs">
+      <DependentUpon>UserMgr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\UserMgr.aspx.designer.cs">
+      <DependentUpon>UserMgr.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sys\UserRole.aspx.cs">
       <DependentUpon>UserRole.aspx</DependentUpon>
@@ -706,17 +715,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DoubleFish.BLL\DoubleFish.BLL.csproj">
-      <Project>{ECF720B1-F3E1-4D00-B92E-265A99DAAFAA}</Project>
-      <Name>DoubleFish.BLL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DoubleFish.File\DoubleFish.File.csproj">
       <Project>{11A7E16D-A0F5-47C8-B978-48FADA721AEE}</Project>
       <Name>DoubleFish.File</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DoubleFish.Html\DoubleFish.Html.csproj">
-      <Project>{B8349038-5990-4206-8595-809C833071FA}</Project>
-      <Name>DoubleFish.Html</Name>
     </ProjectReference>
     <ProjectReference Include="..\DoubleFish.Http\DoubleFish.Http.csproj">
       <Project>{62EB6C47-CDA5-4578-940E-9943F60A2894}</Project>

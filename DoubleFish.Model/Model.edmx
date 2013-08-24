@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Article" EntityType="Model.Store.Article" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MenuInfo" EntityType="Model.Store.MenuInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Permission" EntityType="Model.Store.Permission" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RegionInfo" EntityType="Model.Store.RegionInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RoleInfo" EntityType="Model.Store.RoleInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="Model.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserInfo" EntityType="Model.Store.UserInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserPassword" EntityType="Model.Store.UserPassword" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserRole" EntityType="Model.Store.UserRole" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_MenuInfo_MenuInfo" Association="Model.Store.FK_MenuInfo_MenuInfo">
+            <End Role="MenuInfo" EntitySet="MenuInfo" />
+            <End Role="MenuInfo1" EntitySet="MenuInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Permission_MenuInfo" Association="Model.Store.FK_Permission_MenuInfo">
+            <End Role="MenuInfo" EntitySet="MenuInfo" />
+            <End Role="Permission" EntitySet="Permission" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYS_User_SYS_Region" Association="Model.Store.FK_SYS_User_SYS_Region">
+            <End Role="RegionInfo" EntitySet="RegionInfo" />
+            <End Role="UserInfo" EntitySet="UserInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tb_sys_article_info_tb_sys_article_info" Association="Model.Store.FK_tb_sys_article_info_tb_sys_article_info">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="Article" EntitySet="Article" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserPassword_UserInfo" Association="Model.Store.FK_UserPassword_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="UserPassword" EntitySet="UserPassword" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_UserInfo" Association="Model.Store.FK_UserRole_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="UserRole" EntitySet="UserRole" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Author" Type="int" Nullable="false" />
+          <Property Name="Content" Type="text" />
+          <Property Name="Time" Type="datetime" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="Updated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MenuInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Parent" Type="int" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="Url" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="Index" Type="int" Nullable="false" />
+          <Property Name="Creator" Type="int" Nullable="false" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="Updated" Type="datetime" Nullable="false" />
+          <Property Name="Note" Type="text" />
+          <Property Name="Flag" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Permission">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Role" Type="int" Nullable="false" />
+          <Property Name="User" Type="int" Nullable="false" />
+          <Property Name="Menu" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RegionInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Code" Type="varchar" MaxLength="50" />
+          <Property Name="Parent" Type="int" Nullable="false" />
+          <Property Name="Flag" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RoleInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="Updated" Type="datetime" Nullable="false" />
+          <Property Name="Note" Type="varchar" MaxLength="500" />
+          <Property Name="Flag" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="UserInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Sex" Type="int" Nullable="false" />
+          <Property Name="Birthday" Type="date" Nullable="false" />
+          <Property Name="Telephone" Type="varchar" MaxLength="20" />
+          <Property Name="Mobile" Type="varchar" MaxLength="20" />
+          <Property Name="Mail" Type="varchar" MaxLength="30" />
+          <Property Name="Region" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="RegistTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserPassword">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="User" Type="int" Nullable="false" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Time" Type="datetime" Nullable="false" />
+          <Property Name="Flag" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Role" Type="int" Nullable="false" />
+          <Property Name="User" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_MenuInfo_MenuInfo">
+          <End Role="MenuInfo" Type="Model.Store.MenuInfo" Multiplicity="1" />
+          <End Role="MenuInfo1" Type="Model.Store.MenuInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MenuInfo1">
+              <PropertyRef Name="Parent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Permission_MenuInfo">
+          <End Role="MenuInfo" Type="Model.Store.MenuInfo" Multiplicity="1" />
+          <End Role="Permission" Type="Model.Store.Permission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Permission">
+              <PropertyRef Name="Menu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYS_User_SYS_Region">
+          <End Role="RegionInfo" Type="Model.Store.RegionInfo" Multiplicity="1" />
+          <End Role="UserInfo" Type="Model.Store.UserInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegionInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserInfo">
+              <PropertyRef Name="Region" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tb_sys_article_info_tb_sys_article_info">
+          <End Role="UserInfo" Type="Model.Store.UserInfo" Multiplicity="1" />
+          <End Role="Article" Type="Model.Store.Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Article">
+              <PropertyRef Name="Author" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserPassword_UserInfo">
+          <End Role="UserInfo" Type="Model.Store.UserInfo" Multiplicity="1" />
+          <End Role="UserPassword" Type="Model.Store.UserPassword" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserPassword">
+              <PropertyRef Name="User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRole_UserInfo">
+          <End Role="UserInfo" Type="Model.Store.UserInfo" Multiplicity="1" />
+          <End Role="UserRole" Type="Model.Store.UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="DoubleFishEntities">
+          <EntitySet Name="Articles" EntityType="Model.Article" />
+          <EntitySet Name="MenuInfoes" EntityType="Model.MenuInfo" />
+          <EntitySet Name="Permissions" EntityType="Model.Permission" />
+          <EntitySet Name="RegionInfoes" EntityType="Model.RegionInfo" />
+          <EntitySet Name="RoleInfoes" EntityType="Model.RoleInfo" />
+          <EntitySet Name="sysdiagrams" EntityType="Model.sysdiagram" />
+          <EntitySet Name="UserInfoes" EntityType="Model.UserInfo" />
+          <EntitySet Name="UserPasswords" EntityType="Model.UserPassword" />
+          <EntitySet Name="UserRoles" EntityType="Model.UserRole" />
+          <AssociationSet Name="FK_tb_sys_article_info_tb_sys_article_info" Association="Model.FK_tb_sys_article_info_tb_sys_article_info">
+            <End Role="UserInfo" EntitySet="UserInfoes" />
+            <End Role="Article" EntitySet="Articles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuInfo_MenuInfo" Association="Model.FK_MenuInfo_MenuInfo">
+            <End Role="MenuInfo" EntitySet="MenuInfoes" />
+            <End Role="MenuInfo1" EntitySet="MenuInfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Permission_MenuInfo" Association="Model.FK_Permission_MenuInfo">
+            <End Role="MenuInfo" EntitySet="MenuInfoes" />
+            <End Role="Permission" EntitySet="Permissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYS_User_SYS_Region" Association="Model.FK_SYS_User_SYS_Region">
+            <End Role="RegionInfo" EntitySet="RegionInfoes" />
+            <End Role="UserInfo" EntitySet="UserInfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserPassword_UserInfo" Association="Model.FK_UserPassword_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfoes" />
+            <End Role="UserPassword" EntitySet="UserPasswords" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_UserInfo" Association="Model.FK_UserRole_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfoes" />
+            <End Role="UserRole" EntitySet="UserRoles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Content" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Updated" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="UserInfo" Relationship="Model.FK_tb_sys_article_info_tb_sys_article_info" FromRole="Article" ToRole="UserInfo" />
+        </EntityType>
+        <EntityType Name="MenuInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="Url" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="Index" Type="Int32" Nullable="false" />
+          <Property Name="Creator" Type="Int32" Nullable="false" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Updated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Note" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Flag" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MenuInfo1" Relationship="Model.FK_MenuInfo_MenuInfo" FromRole="MenuInfo" ToRole="MenuInfo1" />
+          <NavigationProperty Name="MenuInfo2" Relationship="Model.FK_MenuInfo_MenuInfo" FromRole="MenuInfo1" ToRole="MenuInfo" />
+          <NavigationProperty Name="Permissions" Relationship="Model.FK_Permission_MenuInfo" FromRole="MenuInfo" ToRole="Permission" />
+        </EntityType>
+        <EntityType Name="Permission">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Role" Type="Int32" Nullable="false" />
+          <Property Name="User" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MenuInfo" Relationship="Model.FK_Permission_MenuInfo" FromRole="Permission" ToRole="MenuInfo" />
+        </EntityType>
+        <EntityType Name="RegionInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Code" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Parent" Type="Int32" Nullable="false" />
+          <Property Name="Flag" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="UserInfoes" Relationship="Model.FK_SYS_User_SYS_Region" FromRole="RegionInfo" ToRole="UserInfo" />
+        </EntityType>
+        <EntityType Name="RoleInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Updated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Note" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Flag" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="UserInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Sex" Type="Int32" Nullable="false" />
+          <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Telephone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Mobile" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Mail" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="RegistTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Articles" Relationship="Model.FK_tb_sys_article_info_tb_sys_article_info" FromRole="UserInfo" ToRole="Article" />
+          <NavigationProperty Name="RegionInfo" Relationship="Model.FK_SYS_User_SYS_Region" FromRole="UserInfo" ToRole="RegionInfo" />
+          <NavigationProperty Name="UserPasswords" Relationship="Model.FK_UserPassword_UserInfo" FromRole="UserInfo" ToRole="UserPassword" />
+          <NavigationProperty Name="UserRoles" Relationship="Model.FK_UserRole_UserInfo" FromRole="UserInfo" ToRole="UserRole" />
+        </EntityType>
+        <EntityType Name="UserPassword">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Flag" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="UserInfo" Relationship="Model.FK_UserPassword_UserInfo" FromRole="UserPassword" ToRole="UserInfo" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Role" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="UserInfo" Relationship="Model.FK_UserRole_UserInfo" FromRole="UserRole" ToRole="UserInfo" />
+        </EntityType>
+        <Association Name="FK_tb_sys_article_info_tb_sys_article_info">
+          <End Role="UserInfo" Type="Model.UserInfo" Multiplicity="1" />
+          <End Role="Article" Type="Model.Article" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_MenuInfo_MenuInfo">
+          <End Role="MenuInfo" Type="Model.MenuInfo" Multiplicity="1" />
+          <End Role="MenuInfo1" Type="Model.MenuInfo" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Permission_MenuInfo">
+          <End Role="MenuInfo" Type="Model.MenuInfo" Multiplicity="1" />
+          <End Role="Permission" Type="Model.Permission" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_SYS_User_SYS_Region">
+          <End Role="RegionInfo" Type="Model.RegionInfo" Multiplicity="1" />
+          <End Role="UserInfo" Type="Model.UserInfo" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_UserPassword_UserInfo">
+          <End Role="UserInfo" Type="Model.UserInfo" Multiplicity="1" />
+          <End Role="UserPassword" Type="Model.UserPassword" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_UserRole_UserInfo">
+          <End Role="UserInfo" Type="Model.UserInfo" Multiplicity="1" />
+          <End Role="UserRole" Type="Model.UserRole" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="DoubleFishEntities">
+          <EntitySetMapping Name="Articles">
+            <EntityTypeMapping TypeName="Model.Article">
+              <MappingFragment StoreEntitySet="Article">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Updated" ColumnName="Updated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MenuInfoes">
+            <EntityTypeMapping TypeName="Model.MenuInfo">
+              <MappingFragment StoreEntitySet="MenuInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Index" ColumnName="Index" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Updated" ColumnName="Updated" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Permissions">
+            <EntityTypeMapping TypeName="Model.Permission">
+              <MappingFragment StoreEntitySet="Permission">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="User" ColumnName="User" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegionInfoes">
+            <EntityTypeMapping TypeName="Model.RegionInfo">
+              <MappingFragment StoreEntitySet="RegionInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Parent" ColumnName="Parent" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoleInfoes">
+            <EntityTypeMapping TypeName="Model.RoleInfo">
+              <MappingFragment StoreEntitySet="RoleInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Updated" ColumnName="Updated" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Model.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserInfoes">
+            <EntityTypeMapping TypeName="Model.UserInfo">
+              <MappingFragment StoreEntitySet="UserInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="RegistTime" ColumnName="RegistTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserPasswords">
+            <EntityTypeMapping TypeName="Model.UserPassword">
+              <MappingFragment StoreEntitySet="UserPassword">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="Model.UserRole">
+              <MappingFragment StoreEntitySet="UserRole">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FK_tb_sys_article_info_tb_sys_article_info" TypeName="Model.FK_tb_sys_article_info_tb_sys_article_info" StoreEntitySet="Article">
+            <EndProperty Name="UserInfo">
+              <ScalarProperty Name="Id" ColumnName="Author" />
+            </EndProperty>
+            <EndProperty Name="Article">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_MenuInfo_MenuInfo" TypeName="Model.FK_MenuInfo_MenuInfo" StoreEntitySet="MenuInfo">
+            <EndProperty Name="MenuInfo">
+              <ScalarProperty Name="Id" ColumnName="Parent" />
+            </EndProperty>
+            <EndProperty Name="MenuInfo1">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Permission_MenuInfo" TypeName="Model.FK_Permission_MenuInfo" StoreEntitySet="Permission">
+            <EndProperty Name="MenuInfo">
+              <ScalarProperty Name="Id" ColumnName="Menu" />
+            </EndProperty>
+            <EndProperty Name="Permission">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_SYS_User_SYS_Region" TypeName="Model.FK_SYS_User_SYS_Region" StoreEntitySet="UserInfo">
+            <EndProperty Name="RegionInfo">
+              <ScalarProperty Name="Id" ColumnName="Region" />
+            </EndProperty>
+            <EndProperty Name="UserInfo">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_UserPassword_UserInfo" TypeName="Model.FK_UserPassword_UserInfo" StoreEntitySet="UserPassword">
+            <EndProperty Name="UserInfo">
+              <ScalarProperty Name="Id" ColumnName="User" />
+            </EndProperty>
+            <EndProperty Name="UserPassword">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_UserRole_UserInfo" TypeName="Model.FK_UserRole_UserInfo" StoreEntitySet="UserRole">
+            <EndProperty Name="UserInfo">
+              <ScalarProperty Name="Id" ColumnName="User" />
+            </EndProperty>
+            <EndProperty Name="UserRole">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

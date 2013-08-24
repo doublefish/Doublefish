@@ -85,10 +85,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DoubleFish.BLL\DoubleFish.BLL.csproj">
-      <Project>{ECF720B1-F3E1-4D00-B92E-265A99DAAFAA}</Project>
-      <Name>DoubleFish.BLL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DoubleFish.Http\DoubleFish.Http.csproj">
       <Project>{62EB6C47-CDA5-4578-940E-9943F60A2894}</Project>
       <Name>DoubleFish.Http</Name>

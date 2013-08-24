@@ -20,3 +20,14 @@ D:\My Project\DoubleFish\DoubleFish\DoubleFish.BLL\bin\Debug\DoubleFish.Database
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.BLL\obj\Debug\DoubleFish.BLL.csprojResolveAssemblyReference.cache
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.BLL\obj\Debug\DoubleFish.BLL.dll
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.BLL\obj\Debug\DoubleFish.BLL.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.BLL\bin\Debug\DoubleFish.BLL.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.BLL\bin\Debug\DoubleFish.BLL.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.BLL\bin\Debug\DoubleFish.DAL.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.BLL\bin\Debug\DoubleFish.Model.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.BLL\bin\Debug\DoubleFish.Database.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.BLL\bin\Debug\DoubleFish.DAL.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.BLL\bin\Debug\DoubleFish.Model.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.BLL\bin\Debug\DoubleFish.Database.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.BLL\obj\Debug\DoubleFish.BLL.csprojResolveAssemblyReference.cache
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.BLL\obj\Debug\DoubleFish.BLL.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.BLL\obj\Debug\DoubleFish.BLL.pdb

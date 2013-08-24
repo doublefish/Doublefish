@@ -8,3 +8,7 @@ D:\My Project\DoubleFish\DoubleFish\DoubleFish.Html\bin\Debug\DoubleFish.Html.pd
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Html\obj\Debug\DoubleFish.Html.csprojResolveAssemblyReference.cache
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Html\obj\Debug\DoubleFish.Html.dll
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Html\obj\Debug\DoubleFish.Html.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Html\bin\Debug\DoubleFish.Html.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Html\bin\Debug\DoubleFish.Html.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Html\obj\Debug\DoubleFish.Html.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Html\obj\Debug\DoubleFish.Html.pdb

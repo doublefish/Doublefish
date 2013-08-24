@@ -8,3 +8,8 @@ D:\My Project\DoubleFish\DoubleFish\DoubleFish\bin\Debug\DoubleFish.pdb
 D:\My Project\DoubleFish\DoubleFish\DoubleFish\obj\Debug\DoubleFish.dll
 D:\My Project\DoubleFish\DoubleFish\DoubleFish\obj\Debug\DoubleFish.pdb
 D:\My Project\DoubleFish\DoubleFish\DoubleFish\obj\Debug\DoubleFish.csprojResolveAssemblyReference.cache
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish\bin\Debug\DoubleFish.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish\bin\Debug\DoubleFish.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish\obj\Debug\DoubleFish.csprojResolveAssemblyReference.cache
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish\obj\Debug\DoubleFish.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish\obj\Debug\DoubleFish.pdb

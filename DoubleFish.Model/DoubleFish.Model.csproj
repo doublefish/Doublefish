@@ -77,16 +77,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginUser.cs" />
-    <Compile Include="Orm.cs">
-      <DependentUpon>Orm.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="Orm.designer.cs">
+    <Compile Include="Model.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Orm.dbml</DependentUpon>
+      <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
-    <Compile Include="OrmBase.cs" />
     <Compile Include="PagedQuery\PagedDepartmentArgs.cs" />
     <Compile Include="PagedQuery\PagedQueryArgs.cs" />
     <Compile Include="PagedQuery\PagedRoleArgs.cs" />
@@ -99,18 +94,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Orm.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Orm.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Orm.dbml.layout">
-      <DependentUpon>Orm.dbml</DependentUpon>
+    <EntityDeploy Include="Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

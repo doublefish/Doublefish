@@ -52,3 +52,30 @@ D:\My Project\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.Database.
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Web.View\obj\Debug\DoubleFish.Web.View.csprojResolveAssemblyReference.cache
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Web.View\obj\Debug\DoubleFish.Web.View.dll
 D:\My Project\DoubleFish\DoubleFish\DoubleFish.Web.View\obj\Debug\DoubleFish.Web.View.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.Web.View.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.Web.View.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.BLL.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.File.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.Html.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.Http.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.Model.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.Web.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\evohtmltopdf.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\itextsharp.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\PDFVision.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\wnvhtmlconvert.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.DAL.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.Database.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.BLL.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.File.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.Html.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.Http.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.Model.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.Web.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.DAL.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\bin\DoubleFish.Database.pdb
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\obj\Debug\DoubleFish.Web.View.csprojResolveAssemblyReference.cache
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\obj\Debug\DoubleFish.Web.View.dll
+D:\Project\Personal\DoubleFish\DoubleFish\DoubleFish.Web.View\obj\Debug\DoubleFish.Web.View.pdb
